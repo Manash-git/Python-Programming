@@ -1,0 +1,3 @@
+Hello World
+Equiavalent code
+Normal Code
