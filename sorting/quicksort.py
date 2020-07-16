@@ -35,4 +35,4 @@ print("original lst=> ",lst)
 l= len(lst)-1
 # pivot_palace(lst,0,l)
 quick_sort(lst,0,l)
-print("Sorted List === ",lst)    
+print("Sorted List === ",lst)
