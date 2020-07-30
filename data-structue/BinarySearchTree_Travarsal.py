@@ -21,6 +21,7 @@ class BinaryTree:
             return print("Invalid Input")
     
     def preorder(self,start,travarsal):
+        # Root -> Left -> Right
         if start:
             travarsal= travarsal + (str(start.value)+ " - ")
             # print("Test=>",travarsal)
@@ -31,6 +32,7 @@ class BinaryTree:
     
     
     def inorder(self,start):
+        # Left -> Root -> Right
         if start:
             self.inorder(start.left)
             print(start.value,end=" - ")
@@ -38,6 +40,7 @@ class BinaryTree:
             
         
     def postorder(self, start):
+        # Left -> Right -> Root
        if start:
             self.inorder(start.left)
             self.inorder(start.right)
