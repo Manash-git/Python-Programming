@@ -105,6 +105,24 @@ class BST:
     
     
     ############  End of Height ##################
+    ############# Search ###################
+    
+    def search(self,value):
+        if self.root!= None:
+            return self._search(value, self.root)
+        else:
+            return False
+    
+    def _search(self, value, cur_node):
+        if value == cur_node.value:
+            return True
+        elif value < cur_node.value and cur_node.left_child != None:
+            return self._search(value, cur_node.left_child)
+        elif value>  cur_node.value and cur_node.right_child != None:
+            return self._search( value, cur_node.right_child)
+        else:
+            return False
+    ############ end of search ##############
 
 ####################### Call the program ###################
 myBST= BST()
@@ -129,5 +147,7 @@ print("In-Order Print=> ",end="")
 print(myBST.print_tree())
 myBST.no_of_elements()
 print(myBST.height())
+
+print(myBST.search(11))
 
 
